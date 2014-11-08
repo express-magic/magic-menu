@@ -1,0 +1,13 @@
+{
+  "name": "magic-menu",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./menu.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/express-magic/magic-menu.git"
+  },
+  "dependencies": {
+    "magic-log": "git://github.com/express-magic/magic-log"
+  }
+}
