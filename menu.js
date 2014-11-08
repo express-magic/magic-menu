@@ -11,14 +11,14 @@ module.exports = function(app, req, res ,next) {
     if ( typeof next === 'function') { next(); }
     return;
   } else {
-    //schema is a global object, 
-    //calling schema.define pushes into app.get('schema').models
-    let schema = app.get('schema')
-      , Menu = schema.define('Menu', {
+    //schema is a reference to a global object, 
+    //calling define pushes into app.get('schema').models
+    //using caminte
+    let Menu = define('Menu', {
           name:   { type: String, length: 23 }
         , htmlId: { type: String, length: 23 }
         })
-      , MenuItem = schema.define('MenuItem', {
+      , MenuItem = define('MenuItem', {
         text:   { type: String, lenght: 23 } //text of the menu item
       , htmlId: { type: String, length: 23 } //html li wrapper id
       , href:   { type: String } //html a href attribute
